@@ -3,3 +3,4 @@
 <button (click)="sumar()">Sumar</button>
 <button (click)="restar()">Restar</button>
 <div [class]="classCSScantidad">{{cantidad}} </div>
+<div [ngClass]= "{positivo:cantidad>0, negativo:cantidad<0}">{{cantidad}} </div>
