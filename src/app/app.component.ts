@@ -5,13 +5,24 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'Mi primer aplicación';
-  modificado = false
+export class AppComponent {  
+  cantidad = 0
+  classCSScantidad = ""
 
-  changeTitle(){
-    this.title="Estoy cambiando la variable title"
-    this.modificado = true
-
+  sumar(){
+    this.cantidad++
+    if (this.cantidad > 0) {
+      this.classCSScantidad= "positivo"
+    }else{
+      this.classCSScantidad="negativo"
+    }   
+  }
+  restar(){
+    this.cantidad-- 
+    if (this.cantidad > 0) {
+      this.classCSScantidad= "positivo"
+    }else{
+      this.classCSScantidad="negativo"
+    }    
   }
 }
