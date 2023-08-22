@@ -8,6 +8,14 @@ import { Component } from '@angular/core';
 export class AppComponent {  
   cantidad = 0
   classCSScantidad = ""
+  productos = [
+    "amarillo", "rojo", "azul"
+  ]
+  usuarios = [
+    {name:"Celeste", role: "mamá"},
+    {name:"Guillermo", role: "papá"},
+    {name:"Antonio", role: "hijo"}  
+  ]
 
   sumar(){
     this.cantidad++

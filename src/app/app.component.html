@@ -4,3 +4,14 @@
 <button (click)="restar()">Restar</button>
 <div [class]="classCSScantidad">{{cantidad}} </div>
 <div [ngClass]= "{positivo:cantidad>0, negativo:cantidad<0}">{{cantidad}} </div>
+<div *ngIf="cantidad == 0 || cantidad == 5">{{cantidad}} </div> 
+<div>
+    <p *ngFor="let producto of productos"> {{producto}}</p>
+</div>
+<div>
+    <p *ngFor="let usuario of usuarios"> {{usuario.name}}</p>
+</div>
+
+<div>
+    <app-registro></app-registro>
+</div>
