@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 
@@ -6,15 +7,13 @@ import { Injectable } from '@angular/core';
 })
 export class ProductosService {
   
-  constructor() {
+  constructor( private http:HttpClient) {    
+    
   }
-  
+
     getAll(){
-      return [
-        {name:"motorola", price: "56"}, 
-        {name:"ephone", price: "56"}, 
-        {name: "xiaomi", price: "56"}
-      ]
+      return this.http.get("https://jsonplaceholder.typicode.com/posts")
+      
     }
    
 }

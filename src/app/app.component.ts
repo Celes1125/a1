@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ProductosService } from './productos.service';
 
 @Component({
@@ -6,21 +6,23 @@ import { ProductosService } from './productos.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {  
+export class AppComponent implements OnInit {  
 
   productos:any = []
-
-  usuarios = [
-    {name:"Celeste", role: "mamá"},
-    {name:"Guillermo", role: "papá"},
-    {name:"Antonio", role: "hijo"}  
-  ]
+ 
   constructor ( private productosService : ProductosService ) {
+    this.productosService.getAll().
+    subscribe((data : any) => {
+      console.log ("data: ", data)
+      this.productos = data
+    })
+  }  
 
-    this.productos = productosService.getAll()
-
-
+  ngOnInit(): void {
+    
   }
 
     
 }
+
+
