@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ProductosService } from './productos.service';
 
 @Component({
   selector: 'app-root',
@@ -6,31 +7,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {  
-  cantidad = 0
-  classCSScantidad = ""
-  productos = [
-    "amarillo", "rojo", "azul"
-  ]
+
+  productos:any = []
+
   usuarios = [
     {name:"Celeste", role: "mamá"},
     {name:"Guillermo", role: "papá"},
     {name:"Antonio", role: "hijo"}  
   ]
+  constructor ( private productosService : ProductosService ) {
 
-  sumar(){
-    this.cantidad++
-    if (this.cantidad > 0) {
-      this.classCSScantidad= "positivo"
-    }else{
-      this.classCSScantidad="negativo"
-    }   
+    this.productos = productosService.getAll()
+
+
   }
-  restar(){
-    this.cantidad-- 
-    if (this.cantidad > 0) {
-      this.classCSScantidad= "positivo"
-    }else{
-      this.classCSScantidad="negativo"
-    }    
-  }
+
+    
 }
