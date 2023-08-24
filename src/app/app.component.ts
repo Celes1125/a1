@@ -9,8 +9,12 @@ import { ProductosService } from './productos.service';
 export class AppComponent implements OnInit {  
 
   productos:any = []
+  productosPipe:any
  
   constructor ( private productosService : ProductosService ) {
+
+    this.productosPipe = this.productosService.getAll()
+
     this.productosService.getAll().
     subscribe((data : any) => {
       console.log ("data: ", data)
