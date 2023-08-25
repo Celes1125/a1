@@ -16,13 +16,19 @@
 
 <h1>Productos con pipe</h1>
 
-<div *ngFor="let producto of productosPipe | async">
+<div *ngFor="let producto of productosPipe | async ">
+    <p> {{producto | json}} </p>
     <p > {{producto.id}} </p>
-    <p > {{producto.title}} </p>
+    <p > {{producto.title | uppercase | concatenar}} </p>
     <p > {{producto.body}} </p>   
-    
-
     
 </div>
 
+<div *ngFor="let producto of productosPipe | async ">
+    
+    <p > {{producto.id}} </p>
+    <p > {{producto.title | concatenar: "SE ESCRIBE AQUÍ EL VALOR PARA EL ARG"}} </p>
+     
+    
+</div>
 
