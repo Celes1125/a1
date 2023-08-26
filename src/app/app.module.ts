@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegistroComponent } from './registro/registro.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ConcatenarPipe } from './concatenar.pipe'
+import { ConcatenarPipe } from './concatenar.pipe';
+import { HomeComponent } from './home/home.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistroComponent,
-    ConcatenarPipe
+    ConcatenarPipe,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
