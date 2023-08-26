@@ -10,7 +10,8 @@ import { ConcatenarPipe } from './concatenar.pipe';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { MenuComponent } from './components/menu/menu.component';
-import { FooterComponent } from './components/footer/footer.component'
+import { FooterComponent } from './components/footer/footer.component';
+import { DetalleComponent } from './pages/detalle/detalle.component'
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FooterComponent } from './components/footer/footer.component'
     HomeComponent,
     LoginComponent,
     MenuComponent,
-    FooterComponent
+    FooterComponent,
+    DetalleComponent
   ],
   imports: [
     BrowserModule,

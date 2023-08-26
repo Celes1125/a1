@@ -4,21 +4,16 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class ProductosService {  
-  constructor( private http:HttpClient) {    
-    
-  }
-    getAll(){
-      return this.http.get("https://jsonplaceholder.typicode.com/posts")
-      
-    }
+export class ProductosService {
+  constructor(private http: HttpClient) {
 
-    /*
-    con promise, que está deprecado
-    getAll(){
-      return this.http.get("https://jsonplaceholder.typicode.com/posts").toPromise()
-      
-    }*/
-     
-   
+  }
+
+  getAll() {
+    return this.http.get("https://jsonplaceholder.typicode.com/posts")
+  }
+  getById(id:string) {
+    return this.http.get("https://jsonplaceholder.typicode.com/posts/"+id)
+  }
+
 }

@@ -1,25 +1,9 @@
-<h1>Productos sunscribe con observable</h1>
+<h1>PRODUCTOS</h1>
 <div *ngFor="let producto of productos">
+    <p> {{producto | json}} </p>
     <p > {{producto.id}} </p>
     <p > {{producto.title}} </p>
     <p > {{producto.body}} </p>  
+    <button routerLink="/productos/{{producto.id}}">ver detalle</button>
     <p>//////////////////////////////////////////////////////////////////</p>
 </div>
-<h1>Productos con promise</h1>
-<p> No pude hacerlo porque el .promise está deprecado y no encontré aun la manera de convertir el observable a promise...</p>
-<p>//////////////////////////////////////////////////////////////////</p>
-<h1>Productos con pipe</h1>
-<div *ngFor="let producto of productosPipe | async ">
-    <p> {{producto | json}} </p>
-    <p > {{producto.id}} </p>
-    <p > {{producto.title | uppercase | concatenar}} </p>
-    <p > {{producto.body}} </p>      
-</div>
-<p>//////////////////////////////////////////////////////////////////</p>
-<div *ngFor="let producto of productosPipe | async ">    
-    <p > {{producto.id}} </p>
-    <p > {{producto.title | concatenar: "SE ESCRIBE AQUÍ EL VALOR PARA EL ARG"}} </p>
-</div>
-<p>//////////////////////////////////////////////////////////////////</p>
-
-

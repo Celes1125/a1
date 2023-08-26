@@ -8,11 +8,9 @@ import { ProductosService } from '../../services/productos.service';
 })
 export class HomeComponent {
   productos:any = []
-  productosPipe:any
+  
  
-  constructor ( private productosService : ProductosService ) {
-
-    this.productosPipe = this.productosService.getAll()
+  constructor ( private productosService : ProductosService ) {    
 
     this.productosService.getAll().
     subscribe((data : any) => {
