@@ -10,10 +10,10 @@ export class ProductosService {
   }
 
   getAll() {
-    return this.http.get("https://jsonplaceholder.typicode.com/posts")
+    return this.http.get("https://www.themealdb.com/api/json/v1/1/search.php?s=")
   }
   getById(id:string) {
-    return this.http.get("https://jsonplaceholder.typicode.com/posts/"+id)
+    return this.http.get("https://www.themealdb.com/api/json/v1/1/lookup.php?i="+id)
   }
 
 }

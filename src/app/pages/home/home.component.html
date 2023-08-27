@@ -1,9 +1,9 @@
 <h1>PRODUCTOS</h1>
 <div *ngFor="let producto of productos">
-    <p> {{producto | json}} </p>
-    <p > {{producto.id}} </p>
-    <p > {{producto.title}} </p>
-    <p > {{producto.body}} </p>  
-    <button routerLink="/productos/{{producto.id}}">ver detalle</button>
+    <p > {{producto.idMeal}} </p>
+    <p > {{producto.strMeal}} </p>
+    <p > {{producto.strInstructions}} </p>  
+    <img src="{{producto.strMealThumb}}">
+    <button routerLink="/productos/{{producto.idMeal}}">ver detalle</button>
     <p>//////////////////////////////////////////////////////////////////</p>
 </div>

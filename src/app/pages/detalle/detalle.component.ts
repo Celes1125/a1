@@ -24,7 +24,7 @@ export class DetalleComponent {
     this.productosService.getById(id)
     .subscribe( (data:any) => {
       if(data){
-        this.producto=data
+        this.producto=data.meals[0]
         console.log("producto: ", this.producto)
       }     
 

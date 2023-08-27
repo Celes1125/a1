@@ -15,7 +15,7 @@ export class HomeComponent {
     this.productosService.getAll().
     subscribe((data : any) => {
       console.log ("data: ", data)
-      this.productos = data
+      this.productos = data.meals
     })
 
 }
