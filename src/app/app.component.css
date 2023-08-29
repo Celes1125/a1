@@ -1,6 +1,7 @@
-.positivo {
-    background-color: green;
+div {
+    margin: 50px;
+    margin-top: 20px;
+    padding: 100px;
+    padding-top: 0%;
 }
-.negativo {
-    background-color: red;
-}
+

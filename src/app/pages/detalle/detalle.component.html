@@ -1,7 +1,10 @@
-<p>detalle works!</p>
+
 <div *ngIf="producto">
-    <p > {{producto.idMeal}} </p>
-    <p > {{producto.strMeal}} </p>
-    <p > {{producto.strInstructions}} </p>  
-    <img src="{{producto.strMealThumb}}">
+    <p class="id"> {{producto.idMeal}} </p>
+    <p class="title"> {{producto.strMeal}} </p>
+    <div class="body">
+        <p class="content" > {{producto.strInstructions}} </p>  
+        <img src="{{producto.strMealThumb}}">
+    </div>
+    
 </div>

@@ -1,0 +1,17 @@
+.card {
+    width: 20%;
+    height: 10%;
+    display:inline-flex;
+    padding: 2px;
+    
+  }
+.header {
+    background-color: goldenrod;
+    display: block;
+    text-align: center;
+}
+.button {
+    display: block;
+    text-align: end;
+}
+

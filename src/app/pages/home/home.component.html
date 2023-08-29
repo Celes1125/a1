@@ -1,9 +1,18 @@
-<h1>PRODUCTOS</h1>
-<div *ngFor="let producto of productos">
-    <p > {{producto.idMeal}} </p>
-    <p > {{producto.strMeal}} </p>
-    <p > {{producto.strInstructions}} </p>  
-    <img src="{{producto.strMealThumb}}">
-    <button routerLink="/productos/{{producto.idMeal}}">ver detalle</button>
-    <p>//////////////////////////////////////////////////////////////////</p>
-</div>
+
+    
+        <mat-card *ngFor="let producto of productos" class="card">
+            <mat-card-header class="header">      
+              <mat-card-title class="title">{{producto.strMeal}}</mat-card-title>      
+            </mat-card-header>
+            <img mat-card-image src="{{producto.strMealThumb}}" alt="">    
+            <mat-card-actions class="button">
+              <button routerLink="/productos/{{producto.idMeal}}"  mat-button>ver receta</button>      
+            </mat-card-actions>
+          </mat-card>
+    
+
+
+
+
+
+  
