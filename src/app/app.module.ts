@@ -18,6 +18,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar'; 
 import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
+import { ProductoComponent } from './components/producto/producto.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import {MatIconModule} from '@angular/material/icon';
     LoginComponent,
     MenuComponent,
     FooterComponent,
-    DetalleComponent
+    DetalleComponent,
+    ProductoComponent
   ],
   imports: [
     BrowserModule,

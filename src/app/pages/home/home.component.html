@@ -1,14 +1,8 @@
 
-    
-        <mat-card *ngFor="let producto of productos" class="card">
-            <mat-card-header class="header">      
-              <mat-card-title class="title">{{producto.strMeal}}</mat-card-title>      
-            </mat-card-header>
-            <img mat-card-image src="{{producto.strMealThumb}}" alt="">    
-            <mat-card-actions class="button">
-              <button routerLink="/productos/{{producto.idMeal}}"  mat-button>ver receta</button>      
-            </mat-card-actions>
-          </mat-card>
+    <div *ngFor="let producto of productos">
+      <app-producto [data]="producto"></app-producto>  
+    </div>
+        
     
 
 

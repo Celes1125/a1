@@ -1,0 +1,9 @@
+<mat-card class="card">
+    <mat-card-header class="header">      
+      <mat-card-title class="title">{{data.strMeal}}</mat-card-title>      
+    </mat-card-header>
+    <img mat-card-image src="{{data.strMealThumb}}" alt="">    
+    <mat-card-actions class="button">
+      <button routerLink="/productos/{{data.idMeal}}"  mat-button>ver receta</button>      
+    </mat-card-actions>
+  </mat-card>
