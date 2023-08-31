@@ -19,6 +19,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
 import { ProductoComponent } from './components/producto/producto.component';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { ProductoComponent } from './components/producto/producto.component';
     ReactiveFormsModule, 
     BrowserAnimationsModule, 
     MatButtonModule, MatMenuModule, MatToolbarModule,
-    MatCardModule, MatIconModule
+    MatCardModule, MatIconModule, 
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
