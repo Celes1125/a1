@@ -7,15 +7,19 @@ import { ProductosService } from '../../services/productos.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  productos:any = []
+  productos: any = []
   
  
-  constructor ( private productosService : ProductosService ) {    
+  constructor ( 
+    private productosService : ProductosService,
+    
+    ) {    
 
     this.productosService.getAll().
     subscribe((data : any) => {
       console.log ("data: ", data)
       this.productos = data.meals
+    
     })
 
 }

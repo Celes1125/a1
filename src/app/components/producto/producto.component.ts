@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Producto } from 'src/app/interfaces/Producto';
 
 
 @Component({
@@ -9,6 +10,8 @@ import { Component, Input } from '@angular/core';
 export class ProductoComponent {
   @Input()
   data:any
+  @Input()
+  verDetalle:boolean=true
 
   
 

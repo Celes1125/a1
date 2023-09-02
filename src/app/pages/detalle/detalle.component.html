@@ -1,10 +1,6 @@
 
 <div *ngIf="producto">
-    <p class="id"> {{producto.idMeal}} </p>
-    <p class="title"> {{producto.strMeal}} </p>
-    <div class="body">
-        <p class="content" > {{producto.strInstructions}} </p>  
-        <img src="{{producto.strMealThumb}}">
-    </div>
+    <app-producto [data]="producto" [verDetalle]="false"></app-producto>   
+   
     
 </div>

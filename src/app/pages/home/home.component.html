@@ -2,13 +2,15 @@
 
       <mat-grid-list  cols="6" rowHeight="1:1.5">
       <mat-grid-tile *ngFor="let producto of productos" >
-        <app-producto [data]="producto" ></app-producto>
-      </mat-grid-tile>      
+        <app-producto [data]="producto" [verDetalle]="true"></app-producto>
+      </mat-grid-tile> 
+       
     </mat-grid-list>
 
     <!--<app-producto [data]="producto"></app-producto> -->
  
     
+
 
 
 
