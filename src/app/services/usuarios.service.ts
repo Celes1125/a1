@@ -6,13 +6,15 @@ import { BehaviorSubject, Observable } from 'rxjs';
 })
 export class UsuariosService {
 
-  authenticationState = new BehaviorSubject(false)
+  authenticationState = new BehaviorSubject((localStorage.getItem("login")?true:false))
 
   constructor() { }
 
   authenticate () {
     // al loguearte cambia el estado a true
     this.authenticationState.next(true)
+    localStorage.setItem("login", "true")
+
   }
 
   isAuthenticate():Observable<boolean>{
@@ -28,5 +30,7 @@ export class UsuariosService {
   logout () {
     // al desloguearte cambia el estado a false
     this.authenticationState.next(false)
+    localStorage.removeItem("login")
+
   }
 }
