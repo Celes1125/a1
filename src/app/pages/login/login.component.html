@@ -1,1 +1,20 @@
-<p>login works!</p>
+<div>
+    <form [formGroup]="myForm" (ngSubmit)="login()">        
+        <div>
+            <label>Correo</label>
+            <input type="email" formControlName="correo">
+         </div>
+         <div>
+            <label>clave</label>
+            <input type="password" formControlName="clave" 
+            [ngClass]="{error: myForm.get('clave')?.hasError('required') && myForm.get('clave')?.dirty, warning: myForm.get('clave')?.hasError('minlength') && myForm.get('clave')?.dirty }">
+            <div *ngIf="myForm.get('clave')?.errors && myForm.get('clave')?.dirty">
+                <p *ngIf="myForm.get('clave')?.hasError('required')">El campo es obligatorio</p>
+                <p *ngIf="myForm.get('clave')?.hasError('minlength')">Debe tener al menos 6 caracteres</p>
+            </div>
+        </div>
+            
+         <input type="submit" value="login" [disabled]="myForm.invalid" >
+    </form> 
+    
+</div>

@@ -7,6 +7,9 @@
     <mat-card-actions *ngIf="verDetalle" class="button">
       <button routerLink="/productos/{{data.idMeal}}" mat-button>ver receta</button>      
     </mat-card-actions>
+    <mat-card-actions *ngIf="isLogin" class="button">
+      <button mat-button>comprar</button>      
+    </mat-card-actions>
   </mat-card>
 
 

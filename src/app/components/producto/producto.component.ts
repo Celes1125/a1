@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Producto } from 'src/app/interfaces/Producto';
+import { UsuariosService } from 'src/app/services/usuarios.service';
 
 
 @Component({
@@ -12,6 +13,19 @@ export class ProductoComponent {
   data:any
   @Input()
   verDetalle:boolean=true
+  isLogin:boolean=false
+
+  constructor (
+    private _usuarios: UsuariosService
+  ){
+    this._usuarios.isAuthenticate().subscribe(
+      login => {
+        return this.isLogin = login
+      }
+    )
+  }
+
+
 
   
 
