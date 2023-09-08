@@ -14,6 +14,10 @@ export class MenuComponent {
     this._usuarios.isAuthenticate().subscribe(login => { this.isLogin = login })
   }
 
+  logout () {
+    this._usuarios.logout()
+  }
+
   
 
 }

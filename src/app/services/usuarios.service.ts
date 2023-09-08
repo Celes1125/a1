@@ -24,4 +24,9 @@ export class UsuariosService {
     // este devuelve el valor del observable, si está en false o en true
     this.authenticationState.value
   }
+
+  logout () {
+    // al desloguearte cambia el estado a false
+    this.authenticationState.next(false)
+  }
 }

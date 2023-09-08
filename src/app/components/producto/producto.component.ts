@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { Producto } from 'src/app/interfaces/Producto';
 import { UsuariosService } from 'src/app/services/usuarios.service';
 
 
